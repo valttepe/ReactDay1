@@ -31,8 +31,8 @@ class HomeScreen extends React.Component {
         this.setState({
             isLoading: true,
         });
-        fetchGetJSON(`${pokemonApiUrl}/pokemon`)
-            .then(result => {
+        fetchGetJSON(`${pokemonApiUrl}/pokemon/?limit=20&offset=20"`)
+            .then((result) => {
                 // var pokemons = result.results.map( Object.values );
                 const pokemons = result.results;
                 console.log(pokemons);
